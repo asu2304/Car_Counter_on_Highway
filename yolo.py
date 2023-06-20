@@ -10,8 +10,7 @@ import math
 # cap.set(4, 200)
 
 # video
-cap = cv2.VideoCapture("../videos/cars.mp4")
-
+cap = cv2.VideoCapture("videos/cars.mp4")
 
 classes = [
     "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat",
@@ -27,7 +26,7 @@ classes = [
 ]
 
 
-model = YOLO('../Yolo-Weights/yolov8n.pt')
+model = YOLO('Yolo-Weights/yolov8l.pt')
 # results = model("download.jpeg", show = True)
 # cv2.waitKey(0)
 
