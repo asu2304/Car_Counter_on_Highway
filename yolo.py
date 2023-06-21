@@ -5,12 +5,12 @@ import math
 
 # webcam
 
-# cap = cv2.VideoCapture(0)
-# cap.set(3, 800)
-# cap.set(4, 200)
+cap = cv2.VideoCapture(0)
+cap.set(3, 800)
+cap.set(4, 200)
 
 # video
-cap = cv2.VideoCapture("videos/cars.mp4")
+# cap = cv2.VideoCapture("videos/cars.mp4")
 
 classes = [
     "person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat",
@@ -52,13 +52,11 @@ while True:
             # class name 
             cls = int(box.cls[0])
             
-            
             class_name = classes[cls]
             confidence = str(conf)
 
             cvzone.putTextRect(img, f"{class_name}:{confidence}", (max(0, x1), max(35, y1)), scale = 0.9, thickness = 1)
-            # conf = box.conf[0]
-            # print(conf)
+    
             
     cv2.imshow("Image", img)
     cv2.waitKey(1)
